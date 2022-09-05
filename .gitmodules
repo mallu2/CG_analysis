@@ -1,0 +1,3 @@
+[submodule "pipeline_trajectory_analysis"]
+	path = pipeline_trajectory_analysis
+	url = https://github.com/mallu2/CG_analysis.git
