@@ -1,2 +1,2 @@
- these are the jupyter-notebookd used to analyse the trajectories of CG simulations
+these are jupyter-notebooks used to analyse the trajectories of coarse-grained simulations of proteins diffusing on DNA
 
