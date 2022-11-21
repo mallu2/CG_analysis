@@ -9,7 +9,7 @@ from Spiral import geom
 #from Spiral import MSD
 from Spiral import Coordinates 
 from Spiral import Region
-from Spiral import Iterator_Nb as Iterator
+from Spiral import Iterator_full as Iterator
 
 class analyse_traj:
     
@@ -41,19 +41,9 @@ class analyse_traj:
             COXYl.append(COoperations.COXY(Coordinates.get_coord_traj(frame))) 
         return(COXYl)
 
-    def writer_dis(com,num):
-        COMcoord = []
-        """Number of frames to analyse"""
-        Nof = num
-        """List of frame indexes to analyse"""
-        numL = list(range(0,num,1)) 
-        com = com[0:Nof]
-        for Coordinates, n in zip(com,numL):
-            coord = 'ATOM  {n:4.0f}  CA  AAA A   1    {l[0]:8.3f} {l[1]:8.3f} {l[2]:8.3f}  0.00  0.00\n'.format(l = Coordinates, n=n )
-            COMcoord.append(coord)
-        return(COMcoord)
-    
     def writer_traj(com,num):
+	"Writes the trajectory in pdb format"
+
         COMcoord = []
         """Number of frames to analyse"""
         Nof = num
@@ -66,8 +56,8 @@ class analyse_traj:
         return(COMcoord)
     
     def glob_COM(folder,framecount, step):
-
         """Get path of all trajectory files in folder and return the Coordinates for all atoms and different regions."""
+
         Trajs = glob.glob(folder+'Traj*.dat')
         Trajs.sort()
         print(Trajs)
@@ -213,6 +203,6 @@ from pathlib import Path
 mypath = Path().absolute()
 folder='{}/'.format(mypath)
 
-analyse_traj.glob_COM(folder,100000,10)
+#analyse_traj.glob_COM(folder,100000,10) #old function
 analyse_traj.Displacement(folder,10000,1)
 
