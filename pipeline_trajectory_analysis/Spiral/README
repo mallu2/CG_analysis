@@ -1,4 +1,11 @@
 the iterator.py script analyses the trajectores of the dimer
-Other iterator scripts are just made for different lengths of the protein.
-monomer, id for the monomeric DBD
+Different iterator scripts are just made for different lengths of the protein.
+monomer, for the monomeric DBD
 full, for the full-length protein
+coordinates.py analyses the trajectory coordinates either for a CG simulation or for a .pdb file.
+geometry.py contains the class COoperations which returns the coordinates from the CG trajectory as floats. It can also return the COM of a region and other modified coordinates, the class MSD that calculates the mean square displacement for different tau values, the class geom which calculates Angles and distances.
+
+
+plot_2.py can be used to plot all sorts of data from the analysis to quickly check the simulations. This has later been moved to the jupyter-notebooks.
+
+
