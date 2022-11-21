@@ -6,7 +6,7 @@ import glob
 
 from Spiral import COoperations
 from Spiral import geom
-#from Spiral import MSD
+from Spiral import MSD
 from Spiral import Coordinates 
 from Spiral import Region
 from Spiral import Iterator_full as Iterator
