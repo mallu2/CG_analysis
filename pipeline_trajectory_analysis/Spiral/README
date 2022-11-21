@@ -1,0 +1,4 @@
+the iterator.py script analyses the trajectores of the dimer
+Other iterator scripts are just made for different lengths of the protein.
+monomer, id for the monomeric DBD
+full, for the full-length protein
